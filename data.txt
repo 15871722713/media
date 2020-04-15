@@ -1,0 +1,14 @@
+import os, glob
+
+def fileAppend(filename):
+    myfile = open(filename,'a')
+    myfile.write("####&&&&%%%%")
+    myfile.close
+
+if __name__ == '__main__':
+    dirname = r'C:\Users\XXXX\Desktop\New folder'
+    allFile = glob.glob(dirname + os.sep + '*.mp4')
+
+    for filename in allFile:
+        fileAppend(filename)
+        print(filename + 'is Changed.')
