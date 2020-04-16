@@ -87,9 +87,9 @@ class videoSpider(object):
             print(videoname, videoinfo, videoPath, imgPath)
             print(type(videoname), type(videoinfo), type(videoPath), type(imgPath))
 
-    def GetTengXunVideoUrls(self, keyword):
+    def GetTengXunVideoUrls(self, keyword, page):
         i = 1
-        while i < 40:
+        while i < page:
             r = requests.get("https://v.qq.com/x/search/?q=" + keyword +
                              "&filter=sort%3D1%26&cur=" + str(i), headers=headersJson)
             i += 1
@@ -126,5 +126,5 @@ class videoSpider(object):
             time.sleep(5)
 
 
-videoSpider().GetTengXunVideoUrls('笑话')
+# videoSpider().GetTengXunVideoUrls('笑话', 2)
 # videoSpider().GetXinLangVideoUrls('搞笑')

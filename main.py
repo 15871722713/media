@@ -8,3 +8,10 @@
 # @Software: PyCharm
 # @Desc    :
 # @license : Copyright(C), cienet
+
+from file_modle import main
+from get_video import videoSpider
+
+
+videoSpider().GetTengXunVideoUrls('笑话', 2)
+main()
